@@ -55,7 +55,7 @@ class MoveGroupPythonInterface(object):
 
         # instantiate MoveGroupCommander object
         # infos : interface to a planning group
-        group_name = "arm"
+        group_name = "jaco_arm"
         move_group = moveit_commander.MoveGroupCommander(group_name)
 
         # create DisplayTrajectory ros publisher
