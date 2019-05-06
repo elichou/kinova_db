@@ -181,11 +181,17 @@ class MoveGroupPythonInterface(object):
 
         return waypoints
 
-    def lines_waypoints(self):
+    def line_waypoints(self):
         # line on xy yz and xz plan
         waypoints = []
         wpose = self.move_group.get_current_pose().pose
         waypoints.append(copy.deepcopy(wpose))
 
-        for i in range(4):
-            return
+        p = geometry_msgs.msg.Pose()
+        p.orientation.w = 1.0
+        p.position.x = wpose.position.x - 2
+        p.position.y = wpose.position.y
+        p.position.z = wpose.position.z
+        waypoints.append(copy.deepcopy(p))
+
+        return waypoints
