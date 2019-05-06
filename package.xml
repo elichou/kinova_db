@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <package format="2">
-  <name>db_moveit</name>
+  <name>kinova_db</name>
   <version>0.0.0</version>
   <description>The db_moveit package</description>
 
